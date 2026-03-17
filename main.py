@@ -1,8 +1,16 @@
-# main()
+from kivy.app import App
+from kivy.uix.floatlayout import FloatLayout
 
-def main():
-    return 0
+# MyLayout --> 
+class MyLayout(FloatLayout):
+    pass
+
+
+# AxolApp --> 
+class AxolApp(App):
+    def build(self):
+        return MyLayout()
 
 
 if __name__ == '__main__':
-    main()
+    AxolApp().run()

@@ -1,0 +1,9 @@
+# Virtual environments
+kivy_project/
+.venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
