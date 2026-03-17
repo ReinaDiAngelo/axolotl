@@ -1,15 +1,30 @@
 #:kivy 1.0
 
+<Button>:
+    size_hint: 0.5, 0.2
+    background_color: 0.2, 0.2, 0.2, 1
+    font_size: 40
+
 <MyLayout>:
+
+    # GLOBAL VARIABLES
+    previous_image: previous_image
+    next_image: next_image
+    display_image: display_image
+
     FloatLayout:
+        Image:
+            id: display_image
+            source: ''
+            pos_hint: {'x': 0.0, 'y': 0.1}
         Button:
-            id: previous_btn
-            text: "PREVIOUS"
-            size_hint: 0.5, 0.2
-            pos_hint: {'center_x': 0.25, 'center_y':0.1}
+            id: previous_image
+            text: "[PREVIOUS]"
+            pos_hint: {'x': 0.0, 'y':0.0}
+            on_press: root.prev_img()
         Button:
-            id: forward_btn
-            text: "NEXT"
-            size_hint: 0.5, 0.2
-            pos_hint: {'center_x': 0.75, "center_y": 0.1}
+            id: next_image
+            text: "[NEXT]"
+            pos_hint: {'x': 0.5, "y": 0.0}
+            on_press: root.next_img()
         
