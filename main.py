@@ -5,6 +5,7 @@ from file_management import FileManagement
 
 # MyLayout --> 
 class MyLayout(FloatLayout):
+    
     # Object Instantiations
     previous_image = ObjectProperty(None)
     next_image = ObjectProperty(None)
@@ -16,11 +17,13 @@ class MyLayout(FloatLayout):
         super().__init__()
         self.display_image.source = self.file_names.get_current_image()
 
+    # button widget function
     def prev_img(self):
         self.file_names.set_previous_image()
         self.display_image.source = self.file_names.get_current_image()
         print(self.previous_image.text)
 
+    # button widget function
     def next_img(self):
         self.file_names.set_next_image()
         self.display_image.source = self.file_names.get_current_image()
