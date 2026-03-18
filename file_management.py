@@ -29,18 +29,18 @@ class FileManagement():
 
         return file_names
 
-    #
+    # return the name of the current image to display
     def get_current_image(self):
         return self.file_names[self.current_index]
 
-    # 
+    # Check the previous image by traversing backwards the file_name list
     def set_previous_image(self):
         if self.current_index == 0:
             pass
         else:
             self.current_index -= 1
 
-    # 
+    # Check the next image by traversing forward the file_name list
     def set_next_image(self):
         if self.current_index == self.list_length - 1:
             pass
