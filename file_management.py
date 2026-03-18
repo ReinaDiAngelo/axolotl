@@ -9,7 +9,7 @@ class FileManagement():
 
     def __init__(self):
         super().__init__()
-        self.file_names = self.get_files("anime_stuff")
+        self.file_names = self.get_files("test_images")
         self.list_length = len(self.file_names)
 
     # get_files() --> Given a directory name, create a list of file names (.png, .jpg) within file_names
